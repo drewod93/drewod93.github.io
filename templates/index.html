@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<!--head etc-->
+<body>
+<div><b> {{ title }}</b></div>
+  <!-- you can iterate on a list to add many items -->
+  {% for t in teams %}
+  <p>
+  <div><b> {{t.captain}}'s Team: {{ t.total }}</b></div>
+  	{% for r in t.results %}
+    	<div> {{r}}</div>
+    {% endfor %}
+  {% endfor %}
+  </p>
+</body>
+</html>
